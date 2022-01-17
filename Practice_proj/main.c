@@ -10,12 +10,10 @@
 
 int main(void)
 {
-	
     DDRB = 0xFF;
-    while (1) 
+    for (;;)
     {
-		PORTB = PORTB ^ 0xFF;
+		PORTB = PORTB ^ (1<<5);
 		for (volatile int16_t i; i < 1234; i++){}
     }
 }
-
